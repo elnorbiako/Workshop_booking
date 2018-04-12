@@ -7,7 +7,7 @@ public class Status extends StatusDao{
 	private Integer id;
     private String name;
     
-    
+
 	public Status(Integer id, String name) {
 		super();
 		this.id = id;

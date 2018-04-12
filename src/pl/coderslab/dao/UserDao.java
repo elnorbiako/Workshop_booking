@@ -17,6 +17,7 @@ public class UserDao {
 	private static final String FIND_ALL_USERS_QUERY = "SELECT * FROM users";
 	private static final String READ_USER_EMAIL_QUERY = "Select * from users where email = ?";
 	private static final String READ_USER_GROUPID_QUERY = "Select * from users where user_group_id = ?";
+	private static final String READ_USER_BY_SURNAME_QUERY = "SELECT * FROM users WHERE name like ?";
 
 	 
 	
@@ -137,6 +138,23 @@ public class UserDao {
 	    }
 	}
 	
+	
+	public User readSurname(String userSurname) {
+	    User user = new User();
+	    try (Connection connection = DbUtil.getConnection();
+	    PreparedStatement statement = connection.prepareStatement(READ_USER_BY_SURNAME_QUERY);) {
+	        statement.setString(1, userSurname);
+	        try (ResultSet resultSet = statement.executeQuery()) {
+	            while (resultSet.next()) {
+	                user.setId(resultSet.getInt("id"));
+	                user.setName(resultSet.getString("name"));
+	                user.setEmail(resultSet.getString("email"));
+	                user.setPassword(resultSet.getString("password"));
+	                user.setUserGroupId(resultSet.getInt("user_group_id")); }}
+	    } catch (Exception e) { e.printStackTrace();
+	        System.out.println("Something went wrong...");}
+	    return user;
+	}
 	
 	
 }

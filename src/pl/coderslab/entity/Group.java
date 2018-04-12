@@ -8,7 +8,6 @@ public class Group extends GroupDao{
     private String name;
     
     
-    
 	public Group(Integer id, String name) {
 		super();
 		this.id = id;

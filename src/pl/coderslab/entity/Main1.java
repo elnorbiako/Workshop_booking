@@ -7,11 +7,9 @@ public class Main1{
 	public static void main(String[] args) {
 		
 		
-		User user = new User();
+		Group group = new Group(2, "Test group 2");
 		
-		user = User.read(3);
-		
-		System.out.println(user);
+		Group.add(group);
 				
 		
 	}
