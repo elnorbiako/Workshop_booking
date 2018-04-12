@@ -1,22 +1,21 @@
 package pl.coderslab.entity;
 
-import pl.coderslab.dao.GroupDao;
+import pl.coderslab.dao.StatusDao;
 
-public class Group extends GroupDao{
+public class Status extends StatusDao{
 	
 	private Integer id;
     private String name;
     
     
-    
-	public Group(Integer id, String name) {
+	public Status(Integer id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
 	}
 
 
-	public Group() {
+	public Status() {
 		super();
 	}
 
@@ -39,14 +38,6 @@ public class Group extends GroupDao{
 	public void setName(String name) {
 		this.name = name;
 	} 
-	
-	
-	
-	
+    
 
-    
-    
-    
 }
-
-

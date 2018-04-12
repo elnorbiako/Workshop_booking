@@ -3,7 +3,6 @@ package pl.coderslab.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 import pl.coderslab.entity.User;
@@ -17,7 +16,7 @@ public class UserDao {
 	private static final String DELETE_USER_QUERY = "DELETE FROM users where id = ?";
 	private static final String FIND_ALL_USERS_QUERY = "SELECT * FROM users";
 	private static final String READ_USER_EMAIL_QUERY = "Select * from users where email = ?";
-	private static final String READ_USER_GROUPID_QUERY = "Select * from users where email = ?";
+	private static final String READ_USER_GROUPID_QUERY = "Select * from users where user_group_id = ?";
 
 	 
 	
