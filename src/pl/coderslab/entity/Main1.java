@@ -7,10 +7,7 @@ public class Main1{
 	public static void main(String[] args) {
 		
 		
-		Group group = new Group(2, "Test group 2");
-		
-		Group.add(group);
-				
+		Reservation reserv = new Reservation(2018-04-13, 2018-04-16, "Poproszę z widokiem na Giewont", 0, 3, 0)
 		
 	}
 }
