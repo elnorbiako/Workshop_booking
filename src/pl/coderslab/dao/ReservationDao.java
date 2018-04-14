@@ -118,6 +118,30 @@ public class ReservationDao {
 	        System.out.println("Something went wrong...");
 	    }
 	}
+	
+	public static Reservation[] loadReservationsUserId(int userId) {
+		ArrayList<Reservation> reservs = new ArrayList<Reservation>();
+		try (Connection connection = DbUtil.getConnection();
+			PreparedStatement statement = connection.prepareStatement(READ_RESERVATION_BY_USERID_QUERY);) {
+			statement.setInt(1, userId);		    
+		    ResultSet resultSet = statement.executeQuery();
+		    while (resultSet.next()) {
+		    	Reservation loadedReserv = new Reservation();
+		        loadedReserv.setId(resultSet.getInt("id"));
+		        loadedReserv.setCreated(resultSet.getDate("created"));
+		        loadedReserv.setDateFrom(resultSet.getString("date_from"));
+		        loadedReserv.setDateTo(resultSet.getString("date_to"));
+		        loadedReserv.setDescription(resultSet.getString("description"));
+		        loadedReserv.setStatusId(resultSet.getInt("status_id"));
+		        loadedReserv.setUserId(resultSet.getInt("users_id"));
+		        loadedReserv.setRoomId(resultSet.getInt("room_id"));
+		        reservs.add(loadedReserv);}
+		        
+		} catch (Exception e) { e.printStackTrace();
+        System.out.println("Something went wrong...");}
+		Reservation[] uArray = new Reservation[reservs.size()]; uArray = reservs.toArray(uArray);
+		    return uArray;
+		    }
 
 }
 

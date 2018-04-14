@@ -139,8 +139,9 @@ public class UserDao {
 	}
 	
 	
-	public User readSurname(String userSurname) {
-	    User user = new User();
+	public static User readSurname(String userSurname) {
+	    userSurname = "%"+userSurname+"%";
+		User user = new User();
 	    try (Connection connection = DbUtil.getConnection();
 	    PreparedStatement statement = connection.prepareStatement(READ_USER_BY_SURNAME_QUERY);) {
 	        statement.setString(1, userSurname);

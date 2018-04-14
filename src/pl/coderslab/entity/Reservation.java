@@ -130,6 +130,15 @@ public class Reservation extends ReservationDao{
 	public void setRoomId(int roomId) {
 		this.roomId = roomId;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Reservation [id=" + id + ", created=" + created + ", dateFrom=" + dateFrom + ", dateTo=" + dateTo
+				+ ", description=" + description + ", statusId=" + statusId + ", userId=" + userId + ", roomId="
+				+ roomId + "]";
+	}
 		
     
 
