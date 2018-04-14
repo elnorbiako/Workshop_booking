@@ -14,12 +14,11 @@ public class Reservation extends ReservationDao{
     private String description;
     private int statusId;
     private int userId;
-    private int hotelId;
+    private int roomId;
     
     
     
-	public Reservation(String date_from, String date_to, String description, int statusId,
-			int userId, int hotelId) {
+	public Reservation(String date_from, String date_to, String description, int statusId,int userId, int roomId) {
 		super();
 		
 		this.dateFrom = date_from;
@@ -27,7 +26,7 @@ public class Reservation extends ReservationDao{
 		this.description = description;
 		this.statusId = statusId;
 		this.userId = userId;
-		this.hotelId = hotelId;
+		this.roomId = roomId;
 	}
 
 
@@ -122,14 +121,14 @@ public class Reservation extends ReservationDao{
 
 
 
-	public int getHotelId() {
-		return hotelId;
+	public int getRoomId() {
+		return roomId;
 	}
 
 
 
-	public void setHotelId(int hotelId) {
-		this.hotelId = hotelId;
+	public void setRoomId(int roomId) {
+		this.roomId = roomId;
 	}
 		
     

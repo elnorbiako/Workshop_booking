@@ -1,6 +1,8 @@
 package pl.coderslab.entity;
 
-public class Hotel {
+import pl.coderslab.dao.HotelDao;
+
+public class Hotel extends HotelDao {
 	
 	
     

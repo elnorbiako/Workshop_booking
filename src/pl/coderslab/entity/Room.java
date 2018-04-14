@@ -13,9 +13,9 @@ public class Room extends RoomDao {
 	    private int hotelId;
 	    
 	    
-		public Room(Integer id, int number, int maxGuest, String description, double price, int hotelId) {
+		public Room(int number, int maxGuest, String description, double price, int hotelId) {
 			super();
-			this.id = id;
+			
 			this.number = number;
 			this.maxGuest = maxGuest;
 			this.description = description;
