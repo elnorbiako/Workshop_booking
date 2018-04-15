@@ -90,6 +90,13 @@ public class Hotel extends HotelDao {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Hotel [id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + ", pets=" + pets
+				+ ", description=" + description + "] +\n";
+	}
 	
 	
     

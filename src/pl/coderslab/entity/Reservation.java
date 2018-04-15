@@ -137,7 +137,7 @@ public class Reservation extends ReservationDao{
 	public String toString() {
 		return "Reservation [id=" + id + ", created=" + created + ", dateFrom=" + dateFrom + ", dateTo=" + dateTo
 				+ ", description=" + description + ", statusId=" + statusId + ", userId=" + userId + ", roomId="
-				+ roomId + "]";
+				+ roomId + "] +\n";
 	}
 		
     

@@ -87,6 +87,15 @@ public class Room extends RoomDao {
 		public void setHotelId(int hotelId) {
 			this.hotelId = hotelId;
 		}
+
+
+		@Override
+		public String toString() {
+			return "Room [id=" + id + ", number=" + number + ", maxGuest=" + maxGuest + ", description=" + description
+					+ ", price=" + price + ", hotelId=" + hotelId + "] +\n";
+		}
 	    
+		
+		
 		
 }

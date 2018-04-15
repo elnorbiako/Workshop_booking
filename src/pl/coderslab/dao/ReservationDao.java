@@ -142,6 +142,20 @@ public class ReservationDao {
 		Reservation[] uArray = new Reservation[reservs.size()]; uArray = reservs.toArray(uArray);
 		    return uArray;
 		    }
+	
+	
+	public static void updateStatusId(int reservId, int statusId) {
+	    try (Connection connection = DbUtil.getConnection();
+	        PreparedStatement statement = connection.prepareStatement(UPDATE_RESERVATION_STATUSID_QUERY);) {
+	        statement.setInt(2, reservId);
+	        statement.setInt(1, statusId);	        
+	        statement.executeUpdate();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        System.out.println("Something went wrong...");
+	    }
+	 
+	}
 
 }
 
