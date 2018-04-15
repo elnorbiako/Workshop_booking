@@ -42,7 +42,7 @@ public class ReservationDao {
 	        try (ResultSet resultSet = statement.executeQuery()) {
 	            while (resultSet.next()) {
 	            	reserv.setId(resultSet.getInt("id"));
-	            	reserv.setCreated(resultSet.getDate("created"));
+	            	reserv.setCreated(resultSet.getString("created"));
 	            	reserv.setDateFrom(resultSet.getString("date_from"));
 	            	reserv.setDateTo(resultSet.getString("date_to"));
 	            	reserv.setDescription(resultSet.getString("description"));
@@ -84,7 +84,7 @@ public class ReservationDao {
 		    while (resultSet.next()) {
 		    	Reservation loadedReserv = new Reservation();
 		        loadedReserv.setId(resultSet.getInt("id"));
-		        loadedReserv.setCreated(resultSet.getDate("created"));
+		        loadedReserv.setCreated(resultSet.getString("created"));
 		        loadedReserv.setDateFrom(resultSet.getString("date_from"));
 		        loadedReserv.setDateTo(resultSet.getString("date_to"));
 		        loadedReserv.setDescription(resultSet.getString("description"));
@@ -128,7 +128,7 @@ public class ReservationDao {
 		    while (resultSet.next()) {
 		    	Reservation loadedReserv = new Reservation();
 		        loadedReserv.setId(resultSet.getInt("id"));
-		        loadedReserv.setCreated(resultSet.getDate("created"));
+		        loadedReserv.setCreated(resultSet.getString("created"));
 		        loadedReserv.setDateFrom(resultSet.getString("date_from"));
 		        loadedReserv.setDateTo(resultSet.getString("date_to"));
 		        loadedReserv.setDescription(resultSet.getString("description"));

@@ -8,7 +8,7 @@ import pl.coderslab.dao.ReservationDao;
 public class Reservation extends ReservationDao{
 	
 	private Integer id;
-    private Date created; 
+    private String created; 
     private String dateFrom;
     private String dateTo;
     private String description;
@@ -18,11 +18,11 @@ public class Reservation extends ReservationDao{
     
     
     
-	public Reservation(String date_from, String date_to, String description, int statusId,int userId, int roomId) {
+	public Reservation(String dateFrom, String dateTo, String description, int statusId,int userId, int roomId) {
 		super();
 		
-		this.dateFrom = date_from;
-		this.dateFrom = date_to;
+		this.dateFrom = dateFrom;
+		this.dateTo = dateTo;
 		this.description = description;
 		this.statusId = statusId;
 		this.userId = userId;
@@ -49,13 +49,13 @@ public class Reservation extends ReservationDao{
 
 
 
-	public Date getCreated() {
+	public String getCreated() {
 		return created;
 	}
 
 
 
-	public void setCreated(Date created) {
+	public void setCreated(String created) {
 		this.created = created;
 	}
 
@@ -67,20 +67,20 @@ public class Reservation extends ReservationDao{
 
 
 
-	public void setDateFrom(String date_from) {
-		this.dateFrom = date_from;
+	public void setDateFrom(String dateFrom) {
+		this.dateFrom = dateFrom;
 	}
 
 
 
 	public String getDateTo() {
-		return dateFrom;
+		return dateTo;
 	}
 
 
 
-	public void setDateTo(String date_to) {
-		this.dateFrom = date_to;
+	public void setDateTo(String dateTo) {
+		this.dateTo = dateTo;
 	}
 
 

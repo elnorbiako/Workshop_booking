@@ -8,6 +8,14 @@ public class Main5{
 	
 	public static void main(String[] args) {
 		
+		adminMenuReserv();
+		
+	}
+	/**
+	 * method for changing Status id for a given reservation
+	 **/
+	public static void adminMenuReserv() {
+		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Reservation list: ");
@@ -18,8 +26,7 @@ public class Main5{
 		
 		while(!command.equals("quit")) {
 			
-			try {
-			
+			try {			
 										
 				if (command.equals("change")) {
 					
@@ -40,9 +47,7 @@ public class Main5{
 			} catch (NumberFormatException e) {
 				System.out.println("Not a number!");
 			}
-				
-				
-				
+								
 			System.out.println("Reservation list: ");
 			System.out.println(ArrayUtils.toString(Reservation.loadAllReservations()));	
 			System.out.println("Choose option: 'change' to change payment status, or 'quit' to end :");
